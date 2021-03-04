@@ -17,14 +17,15 @@ public class OptionalDemoJava8 {
     public static void main(String[] args) {
         //Find the students associated with a room that have no subjects associated.
         StudentWithRoomThatHasNoSubject studentWithRoomThatHasNoSubject = new StudentWithRoomThatHasNoSubjectImpl();
-        studentWithRoomThatHasNoSubject.studentWithRoomThatHasNoSubject(studentList);
-
+        HashSet<String> studentWithNoSubject = studentWithRoomThatHasNoSubject.studentWithRoomThatHasNoSubject(studentList);
+        System.out.println(studentWithNoSubject);
         //Subjects of students associated with a room that has roomID xyz
         GetSubjectOfRoomxyzInterface getSubjectOfRoomxyzInterface = new GetSubjectOfRoomxyzImpl();
-        getSubjectOfRoomxyzInterface.getSubjectOfClassXYZ(studentList);
-
+        HashSet<String> subjectOfRoomXyz= getSubjectOfRoomxyzInterface.getSubjectOfClassXYZ(studentList);
+        System.out.println(subjectOfRoomXyz);
         //print "hello Student" if a room has students associated.
         GreetClassroomHavingStudent greetClassroomHavingStudent = new GreetClassroomHavingStudentImpl();
-        greetClassroomHavingStudent.greetClassroomHavingStudent(studentList);
+        String studentsInClass = greetClassroomHavingStudent.greetClassroomHavingStudent(studentList);
+        System.out.println(studentsInClass);
     }
 }

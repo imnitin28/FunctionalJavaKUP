@@ -22,7 +22,6 @@ public class GetSubjectOfRoomxyzImpl implements GetSubjectOfRoomxyzInterface {
                 hashSet.add(subject);
             }
         }
-        System.out.println("Subjects : " + hashSet);
         return hashSet;
     }
 }

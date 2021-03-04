@@ -14,7 +14,6 @@ public class StudentWithRoomThatHasNoSubjectImpl implements StudentWithRoomThatH
             if (p.getSubjects().isEmpty() && !p.getRoomID().isEmpty())
             {
                 studentTest.add(p.getName());
-                System.out.println("Name: " + p.getName() + " || rollNumber: " + p.getRollNumber());
             }
         });
         return studentTest;
