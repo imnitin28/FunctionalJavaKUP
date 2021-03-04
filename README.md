@@ -1,6 +1,6 @@
 # FunctionalJavaKUP
 
-Assignment 1. 
+Assignment 1 : 
 Create class 
 ClassRoom: roomID(String), studentList(Optional>)
 Create a Class Students
