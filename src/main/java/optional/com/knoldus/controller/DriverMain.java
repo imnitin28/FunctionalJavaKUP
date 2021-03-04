@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class OptionalDemoJava8 {
+public class DriverMain {
     static ClassroomInfo classroomInfo = new ClassroomInfoImpl();
     static List<Student> studentList = classroomInfo.insertClassroomInfo();
     public static void main(String[] args) {
