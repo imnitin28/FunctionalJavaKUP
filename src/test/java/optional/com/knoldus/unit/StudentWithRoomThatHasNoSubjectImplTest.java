@@ -7,6 +7,8 @@ import optional.com.knoldus.service.StudentWithRoomThatHasNoSubjectImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class StudentWithRoomThatHasNoSubjectImplTest {
@@ -17,6 +19,8 @@ public class StudentWithRoomThatHasNoSubjectImplTest {
     {
         StudentWithRoomThatHasNoSubjectImpl studentWithRoomThatHasNoSubject = new StudentWithRoomThatHasNoSubjectImpl();
         studentWithRoomThatHasNoSubject.studentWithRoomThatHasNoSubject(studentList);
-        Assert.assertEquals(true,studentWithRoomThatHasNoSubject);
+        HashSet<String> studentSetReceived = studentWithRoomThatHasNoSubject.studentWithRoomThatHasNoSubject(studentList);
+        HashSet<String> studentSetTest = new HashSet<>(Arrays.asList("Ayush"));
+        Assert.assertEquals(studentSetTest.toString(),studentSetReceived.toString());
     }
 }

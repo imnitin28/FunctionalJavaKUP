@@ -5,12 +5,16 @@ import optional.com.knoldus.DatabaseModel.ClassroomInfoImpl;
 import optional.com.knoldus.entity.Student;
 import optional.com.knoldus.service.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class OptionalDemoJava8 {
+    static ClassroomInfo classroomInfo = new ClassroomInfoImpl();
+    static List<Student> studentList = classroomInfo.insertClassroomInfo();
     public static void main(String[] args) {
-        ClassroomInfo classroomInfo = new ClassroomInfoImpl();
-        List<Student> studentList = classroomInfo.insertClassroomInfo();
         //Find the students associated with a room that have no subjects associated.
         StudentWithRoomThatHasNoSubject studentWithRoomThatHasNoSubject = new StudentWithRoomThatHasNoSubjectImpl();
         studentWithRoomThatHasNoSubject.studentWithRoomThatHasNoSubject(studentList);

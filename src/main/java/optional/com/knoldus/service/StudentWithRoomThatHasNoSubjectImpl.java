@@ -2,17 +2,21 @@ package optional.com.knoldus.service;
 
 import optional.com.knoldus.entity.Student;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class StudentWithRoomThatHasNoSubjectImpl implements StudentWithRoomThatHasNoSubject{
     @Override
-    public void studentWithRoomThatHasNoSubject(List<Student> people) {
+    public HashSet<String> studentWithRoomThatHasNoSubject(List<Student> people) {
+        HashSet<String> studentTest = new HashSet<>();
         System.out.println("*****Students associated with a room that have no subjects associated*****");
-        people.stream().forEach((p) -> {
-            if (!p.getSubjects().isPresent())
+        people.forEach((p) -> {
+            if (p.getSubjects().isEmpty() && !p.getRoomID().isEmpty())
             {
+                studentTest.add(p.getName());
                 System.out.println("Name: " + p.getName() + " || rollNumber: " + p.getRollNumber());
             }
         });
+        return studentTest;
     }
 }

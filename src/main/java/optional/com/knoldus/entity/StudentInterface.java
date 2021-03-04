@@ -6,6 +6,5 @@ public interface StudentInterface {
     public String getName();
     public int getRollNumber();
     public Optional<List<String>> getSubjects();
-   // public Optional<List<String>> classRoom();
     public boolean subjectIsEmpty();
 }

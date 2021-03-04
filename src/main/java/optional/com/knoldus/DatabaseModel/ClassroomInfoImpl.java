@@ -1,8 +1,5 @@
 package optional.com.knoldus.DatabaseModel;
-
-import optional.com.knoldus.entity.ClassRoom;
 import optional.com.knoldus.entity.Student;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,6 +25,7 @@ public class ClassroomInfoImpl implements ClassroomInfo {
         people.add(student3);
         people.add(student4);
         people.add(student5);
+
         return people;
     }
 }

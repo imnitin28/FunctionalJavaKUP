@@ -5,5 +5,5 @@ import optional.com.knoldus.entity.Student;
 import java.util.List;
 
 public interface GreetClassroomHavingStudent {
-    void greetClassroomHavingStudent(List<Student> people);
+    String greetClassroomHavingStudent(List<Student> people);
 }
